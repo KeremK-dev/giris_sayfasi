@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+#container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .orta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        padding: 0%;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        h3{
+            font-size: 30px;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
+.inp{
+    height: 45px;
+    width: 250px;
+    margin: 10px;
+    border-radius:100px;
+    text-align: center;
+    color: white;
+    background: transparent;
+    border: 4px solid white;
+    &:focus{
+        box-shadow: 0px 0px 10px 10px rgb(18, 255, 18);
+    }
+}
+.inp::placeholder{
+    color: white;
+}
+
+.unut_hatir{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    p{
+        &:hover{
+            color: rgb(193, 193, 193);
+        }
+    }
+}
+@keyframes dönme1{
+    0%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(390deg);
+    }
+}
+.abslut{
+    height:500px;
+    width: 500px;
+    position: absolute;
+    border-radius: 20%;
+}
+#yesil{
+    box-shadow: 0px 0px 10px 10px rgb(18, 255, 18);
+    transform: rotate(30deg);
+    animation: dönme1 7s linear infinite;
+}
+#kirmizi{
+    transform: rotate(70deg);
+    animation: dönme1 8s linear infinite;
+    box-shadow: 0px 0px 10px 10px rgb(255, 0, 0);
+}
+#mavi{
+    transform: rotate(0deg);
+    animation: dönme1 6.5s linear infinite;
+    box-shadow: 0px 0px 10px 10px blue;
+}
+
